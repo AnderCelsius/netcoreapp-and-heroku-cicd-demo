@@ -10,7 +10,7 @@ namespace Calculations.Tests
         public void Add_GivenTwoIntegerNumbers_ReturnSum()
         {
             var calc = new Calculator();
-            int result = calc.Add(1, 2);
+            int result = Calculator.Add(1, 2);
             Assert.Equal(3, result);
         }
 
@@ -18,7 +18,7 @@ namespace Calculations.Tests
         public void AddDouble_GivenTwoDoubleValues_ReturnSum()
         {
             var calc = new Calculator();
-            double result = calc.AddDouble(1.53, 1.45);
+            double result = Calculator.AddDouble(1.53, 1.45);
             Assert.Equal(2.9, result, 0);
         }
 

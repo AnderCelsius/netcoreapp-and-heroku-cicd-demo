@@ -265,6 +265,7 @@ ServiceFabricBackup/
 *.mdf
 *.ldf
 *.ndf
+*.db
 
 # Business Intelligence projects
 *.rdl.data
@@ -361,3 +362,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+.dockerignore
+bin
+.vscode
