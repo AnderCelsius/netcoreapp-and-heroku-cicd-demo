@@ -17,7 +17,7 @@ WORKDIR /src/Calculations.Tests
 RUN dotnet test 
 
 #Publishing
-FROM build AS publish
+FROM base AS publish
 WORKDIR /src/Calculations
 RUN dotnet publish -c Release -o /src/publish
 
