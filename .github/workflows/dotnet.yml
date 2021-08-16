@@ -3,7 +3,7 @@ name: CALCULATIONS_CI
 on:
   pull_request:
     branches: 
-      - main
+       [main]
 
 jobs:
   build_demo_heroku:
