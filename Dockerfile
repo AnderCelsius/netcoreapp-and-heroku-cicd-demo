@@ -1,6 +1,6 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS base
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS base
 WORKDIR /src
 COPY *.sln .
 COPY Calculations/*.csproj Calculations/
@@ -23,7 +23,7 @@ RUN dotnet publish -c Release -o /src/publish
 
 
 #Get the run time into a folder called app
-FROM mcr.microsoft.com/dotnet/runtime:3.1 AS runtime
+FROM mcr.microsoft.com/dotnet/runtime:5.0 AS runtime
 WORKDIR /app
 COPY --from=publish /src/publish .
 #ENTRYPOINT ["dotnet", "Calculations.dll"]
